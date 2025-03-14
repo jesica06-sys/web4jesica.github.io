@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: url('https://storage.googleapis.com/a1aa/image/0ru9U51Sp-3o9Rg_nhTf00XiVFHcAwNDIet3qnJV-Is.jpg') no-repeat center center/cover;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        .search-box {
+            background: rgba(255, 255, 255, 0.75);
+            padding: 10px;
+            border-radius: 5px;
+            right: 20px;
+            width: 700px;
+        }
+        .text-white{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="navbar">
+            <nav class="transparent z-depth-0">
+                <div class="nav-wrapper container">
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="#">Tentang</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Perjalanan</a></li>
+                        <li><a href="#">Kontak</a></li>
+                        <li><a href="#" class="btn black">LOGIN</a></li>
+                        <li><a href="#" class="btn black">SIGN UP</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="content">
+            <h4 class="white-text">MARI KITA MENYELAMI PERJALANAN</h4>
+            <p>Kami akan membantu Anda memilih perjalanan yang mengasyikkan yang mencakup beberapa negara dan kota sekaligus. Dan kami juga dapat memilih satu negara.</p>
+            <a href="#" class="text-white">Periksa Semua Tujuan</a>
+            <div class="search-box row">
+                <div class="input-field col s12 m3">
+                    <input id="destination" type="text" class="validate">
+                    <label for="destination">Destinasi</label>
+                </div>
+                <div class="input-field col s12 m3">
+                    <input id="from-date" type="text" class="datepicker">
+                    <label for="from-date">Dari</label>
+                </div>
+                <div class="input-field col s12 m3">
+                    <input id="to-date" type="text" class="datepicker">
+                    <label for="to-date">Ke</label>
+                </div>
+                <div class="input-field col s12 m3">
+                    <input id="people" type="text" class="validate">
+                    <label for="people">Berapa banyak orang?</label>
+                </div>
+                <div class="input-field col s12 m12">
+                    <a href="#" class="btn black">Cari</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.datepicker');
+            var instances = M.Datepicker.init(elems, {});
+        });
+    </script>
+    <footer>
+        JESICA WAHYU IZATI 243307053
+      </footer>
+</body>
+</html>
